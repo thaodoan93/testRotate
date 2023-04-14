@@ -1,17 +1,17 @@
 <?php
-  function rotLeft(int $a , $d) {
-    if($a == 0) {
+  function rotLeft(int $n , $d) {
+    if($n == 0) {
       return [];
     }
-    if($d > $a) {
-      $d = $d % $a;
+    if($d > $n) {
+      $d = $d % $n;
     }
     $numList = [];
-    for ($i=1; $i<=$a; $i++) {
-      if ($i + $d <= $a) {
+    for ($i=1; $i<=$n; $i++) {
+      if ($i + $d <= $n) {
         $numList[$i-1] = $i + $d;
       } else {
-        $numList[$i-1] = $i + $d - $a;
+        $numList[$i-1] = $i + $d - $n;
       }
     }
     echo implode(' ', $numList);
